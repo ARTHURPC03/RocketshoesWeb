@@ -2,7 +2,7 @@ import Reactotron from 'reactotron-react-js'
 import { reactotronRedux } from 'reactotron-redux'
 
 if (process.env.NODE_ENV === 'development') {
-  const tron = Reactotron.configure({ host: '10.0.2.2' })
+  const tron = Reactotron.configure()
     .use(reactotronRedux())
     .connect()
 
