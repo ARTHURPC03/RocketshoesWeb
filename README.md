@@ -38,7 +38,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Rocketshoes (WEB) é aplicação feita utilizando ReactJS, que implementa o fluxo de carrinho de compras de um e-commerce. Durante os estudos, tive meu primeiro contato com os conceitos de #Redux e Saga, além de conhecer novas ferramentas que auxiliam no dia a dia de um DEV. como o  #Reactotron e do JsonServer.
+Rocketshoes (WEB) é aplicação feita utilizando ReactJS, que implementa o fluxo de carrinho de compras de um e-commerce. Durante os estudos, tive meu primeiro contato com os conceitos de Redux e Saga, além de conhecer novas ferramentas que auxiliam no dia a dia de um DEV. como o Reactotron e do JsonServer.
 
 ## ⚙ Configuração
 
