@@ -6,13 +6,21 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 4px;
 
+  #vazio {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   footer {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 
     button {
+      display: flex;
       background: #7159c1;
       color: #fff;
       border: 0;
@@ -21,7 +29,6 @@ export const Container = styled.div`
       font-weight: bold;
       text-transform: uppercase;
       transition: background 0.2s;
-
       &:hover {
         background: ${darken(0.03, '#7159c1')};
       }
