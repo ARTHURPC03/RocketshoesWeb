@@ -6,7 +6,7 @@
 
 ## :camera: Demonstração
 
-![gif](github/rocketshoes.gif)
+![gif](github/Rocketshoes.gif)
 ![png1](github/1.PNG)
 ![png2](github/2.PNG)
 ![png3](github/3.PNG)
