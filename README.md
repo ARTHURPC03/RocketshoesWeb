@@ -7,10 +7,10 @@
 ## :camera: Demonstração
 
 ![gif](github/rocketshoes.gif)
-![png1](github/1.png)
-![png2](github/2.png)
-![png3](github/3.png)
-![png4](github/4.png)
+![png1](github/1.PNG)
+![png2](github/2.PNG)
+![png3](github/3.PNG)
+![png4](github/4.PNG)
 
 
 ## :rocket: Tecnologias
@@ -18,15 +18,23 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ✔️React
+
 ✔️Arquitetura Flux
+
 ✔️Redux
+
 ✔️Redux Saga
+
 ✔️Styled Components
-✔️Api do GitHub
+
 ✔️Axios
+
 ✔️Json-server
+
 ✔️Reactotron
+
 ✔️React-Toastify
+
 
 ## 💻 Projeto
 
