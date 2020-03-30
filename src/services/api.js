@@ -5,3 +5,6 @@ const api = axios.create({
 })
 
 export default api
+
+// https://my-json-server.typicode.com/arthurpc03/api-rocketshoes
+// http://localhost:3333

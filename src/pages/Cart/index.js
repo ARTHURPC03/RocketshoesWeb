@@ -1,29 +1,41 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
   MdDelete,
+  MdRemoveShoppingCart,
 } from 'react-icons/md'
 
 import { formatPrice } from '../../util/format'
 
 import * as CartActions from '../../store/modules/cart/actions'
 
-import { Container, ProductTable, Total } from './styles'
+import {
+  Container,
+  ProductTable,
+  Total,
+  EmptyCart,
+  StartShopping,
+} from './styles'
 
 export default function Cart() {
-  const total = useSelector(state =>  formatPrice(
-    state.cart.reduce((totalSum, product) => {
-      return totalSum + product.price * product.amount
-    }, 0)
-  ))
+  const total = useSelector((state) =>
+    formatPrice(
+      state.cart.reduce((totalSum, product) => {
+        return totalSum + product.price * product.amount
+      }, 0)
+    )
+  )
 
-  const cart = useSelector(state => state.cart.map(product => ({
-    ...product,
-    subtotal: formatPrice(product.price * product.amount),
-  })))
+  const cart = useSelector((state) =>
+    state.cart.map((product) => ({
+      ...product,
+      subtotal: formatPrice(product.price * product.amount),
+    }))
+  )
 
   const dispatch = useDispatch()
 
@@ -38,7 +50,15 @@ export default function Cart() {
   return (
     <Container>
       {cart.length === 0 ? (
-        <h2 id="vazio">Carrinho vazio</h2>
+        <EmptyCart>
+          <MdRemoveShoppingCart />
+
+          <div>
+            <h2>Oops...</h2>
+            <p>Parece que seu carrinho de compras está vazio!</p>
+            <StartShopping to="/">Começe a comprar</StartShopping>
+          </div>
+        </EmptyCart>
       ) : (
         <ProductTable>
           <thead>
@@ -52,7 +72,7 @@ export default function Cart() {
           </thead>
 
           <tbody>
-            {cart.map(product => (
+            {cart.map((product) => (
               <tr>
                 <td>
                   <img src={product.image} alt={product.title} />
@@ -78,7 +98,9 @@ export default function Cart() {
                 <td>
                   <button
                     type="button"
-                    onClick={() => dispatch(CartActions.removeFromCart(product.id))}
+                    onClick={() =>
+                      dispatch(CartActions.removeFromCart(product.id))
+                    }
                   >
                     <MdDelete size={20} color="#7159c1" />
                   </button>
@@ -89,13 +111,7 @@ export default function Cart() {
         </ProductTable>
       )}
 
-      {cart.length === 0 ? (
-        <footer>
-          <Link to="/">
-            <button type="button">Voltar para Home</button>
-          </Link>
-        </footer>
-      ) : (
+      {cart.length === 0 ? null : (
         <footer>
           <button type="button">Finalizar pedido</button>
           <Total>
